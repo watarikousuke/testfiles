@@ -1,0 +1,58 @@
+/**
+ * 
+ */
+package testfile1;
+
+/**
+ * @author watar
+ *
+ */
+import java.util.Scanner;
+public class Golf {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+		System.out.println("＜ゴルフのスコアチェッカー＞");
+		System.out.println("コースの規定打数を入力してください");
+		System.out.println("　");
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Par： ");
+		int p = scanner.nextInt();
+		System.out.println("　");
+		System.out.println("カップインまでの打数を入力してください");
+		System.out.println("　");
+		System.out.print("： ");
+		int s = scanner.nextInt();
+		int score = s- p;
+		switch (score) {
+		case -3:
+			System.out.println("スコアはアルバトロスです");
+			break;
+		case -2:
+			System.out.println("スコアはイーグルです");
+			break;
+		case -1:
+			System.out.println("スコアはバーディーです");
+			break;
+		case 0:
+			System.out.println("スコアはパーです");
+			break;
+		case 1:
+			System.out.println("スコアはボギーです");
+			break;
+		case 2:
+			System.out.println("スコアはダブルボギーです");
+			break;
+		case 3:
+			System.out.println("スコアはトリプルボギーです");
+			break;
+		default:
+			System.out.println("スコアは+" + score + "です");
+			break;
+		}
+	}
+
+}
