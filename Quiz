@@ -1,0 +1,49 @@
+/**
+ * 
+ */
+package testfile1;
+
+/**
+ * @author watar
+ *
+ */
+import java.util.Scanner;
+public class Quiz {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+		System.out.println("＜四択クイズ＞");
+		System.out.println("次のうち江戸幕府を開いたのは誰？");
+		System.out.println("　");
+		System.out.println("１．織田信長");
+		System.out.println("２．豊臣秀吉");
+		System.out.println("３．徳川家康");
+		System.out.println("４．俺");
+		System.out.println("　");
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("答え： ");
+		int a = scanner.nextInt();
+		System.out.println("　");
+		switch (a) {
+		case 1 :
+			System.out.println("違います。ハズレ");
+			break;
+		case 2 :
+			System.out.println("違います。ハズレ");
+			break;
+		case 3 :
+			System.out.println("正解！よくできました！");
+			break;
+		case 4 :
+			System.out.println("えっ…");
+			break;
+		default :
+			System.out.println("エラー！正しい数字を入れてね！");
+			break;
+		}
+	}
+
+}
