@@ -1,0 +1,43 @@
+/**
+ * 
+ */
+package testfile1;
+
+/**
+ * @author watar
+ *
+ */
+
+public class Takoyaki {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+		System.out.println("＜ロシアンルーレットたこ焼き！＞");
+		int nokori = 6;
+		while (nokori > 0 ) {
+			System.out.println("たこ焼きが" +nokori+ "個ある。食べてみよう！");
+			System.out.println(" ");
+			double r = Math.random() * nokori + 1;
+			int hantei =(int)r;
+			switch (hantei) {
+			case 1:
+				System.out.println("ぎぃぃぃやぁぁぁぁぁ！！");
+				System.out.println("<END>");
+				break;
+			default:
+				System.out.println("うーん、おいしい♪");
+				System.out.println(" ");
+				break;
+			}
+			if (hantei == 1) {
+				break;
+			}
+			nokori--;
+			
+		}
+	}
+
+}
