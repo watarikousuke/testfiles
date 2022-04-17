@@ -1,0 +1,75 @@
+/**
+ * 
+ */
+package testfile1;
+
+/**
+ * @author watar
+ *
+ */
+import java.util.Scanner;
+public class Chouhan {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+		System.out.println("＜丁半ゲーム！＞");
+		System.out.println("さいころを二つ振ります。");
+		System.out.println("出目の合計が「丁（偶数）」か「半（奇数）」かを予想しよう！）」。");
+		System.out.println("当たればかけたお金が二倍！はずれれば没収！");
+		System.out.println("　");
+		int shojikin = 3000;
+		Scanner scanner = new Scanner(System.in );
+		while (shojikin > 0) {
+			System.out.println("現在" +shojikin+ "円あります。いくらかけますか？");
+			System.out.println("　");
+			System.out.print("掛けたい金額を入力してください(1-" +shojikin+ "): ");
+			System.out.println("　");
+			int kakekin = scanner.nextInt();
+			System.out.println("　");
+			System.out.println("丁半の予想をしてください");
+			System.out.print("丁なら０、半なら１と入力：　");
+			int hantei = scanner.nextInt();
+			System.out.println("　");
+			System.out.println("さいころを投げます。");
+			double sai1 = Math.random() *6 + 1;
+			int s1 =(int)sai1;
+			double sai2 = Math.random() *6 + 1;
+			int s2 =(int)sai2;
+			int wa = s1 + s2;    
+			System.out.println(s1 +"と" +s2+ "が出ました。");
+			if (wa % 2 == 0 ) {
+				System.out.println("丁です！");
+				if (hantei == 0) {
+					System.out.println("お金が" +kakekin+ "円増えた！");
+					System.out.println("　");
+					shojikin = shojikin + kakekin;
+				}else {
+					System.out.println("お金が" +kakekin + "円減った！");
+					System.out.println("　");
+					shojikin = shojikin - kakekin;
+				}
+			} else {
+				System.out.println("半です！");
+				if (hantei == 1) {
+					System.out.println("お金が" +kakekin+ "円増えた！");
+					System.out.println("　");
+					shojikin = shojikin + kakekin;
+				}else {
+					System.out.println("お金が" +kakekin + "円減った！");
+					System.out.println("　");
+					shojikin = shojikin - kakekin;
+				}
+			}
+			if (shojikin <= 0) {
+				System.out.println("あああああ！お金が無くなった！！！");
+				System.out.println("＜GAME　OVER＞");
+				break;
+			}
+		}
+
+	}
+
+}
