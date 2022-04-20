@@ -1,0 +1,67 @@
+/**
+ * 
+ */
+package testfile1;
+
+/**
+ * @author watar
+ *
+ */
+public class Person {
+	//三国志の武将のパラメーターデータ的なオブジェクト指向練習用クラス
+	String name;
+	String yomi;
+	int buryoku;
+	int chiryoku;
+	int miryoku;
+	
+
+	/**
+	 * @param args
+	 */
+	 public static void main(String [] args) {
+		//曹操のインスタンス
+		Person p1 = new Person();
+		p1.name ="曹操";
+		p1.yomi ="ソウソウ";
+		p1.buryoku =90;
+		p1.chiryoku = 94;
+		p1.miryoku = 97;
+		//劉備のインスタンス
+		Person p2 = new Person();
+		p2.name ="劉備";
+		p2.yomi ="リュウビ";
+		p2.buryoku = 70;
+		p2.chiryoku = 85;
+		p2.miryoku = 99;
+		//孫権のインスタンス
+		Person p3 = new Person();
+		p3.name ="孫権";
+		p3.yomi ="ソンケン";
+		p3.buryoku = 79;
+		p3.chiryoku = 90;
+		p3.miryoku = 95;
+		//曹操のデータを表示
+		System.out.println("名前：　"+p1.name);
+		System.out.println("カナ：　"+p1.yomi);
+		System.out.println("武力：　"+p1.buryoku);
+		System.out.println("知力：　"+p1.chiryoku);
+		System.out.println("魅力：　"+p1.miryoku);
+		System.out.println("　");
+		//劉備のデータを表示
+		System.out.println("名前：　"+p2.name);
+		System.out.println("カナ：　"+p2.yomi);
+		System.out.println("武力：　"+p2.buryoku);
+		System.out.println("知力：　"+p2.chiryoku);
+		System.out.println("魅力：　"+p2.miryoku);
+		System.out.println("　");		
+		//孫権のデータを表示
+		System.out.println("名前：　"+p3.name);
+		System.out.println("カナ：　"+p3.yomi);
+		System.out.println("武力：　"+p3.buryoku);
+		System.out.println("知力：　"+p3.chiryoku);
+		System.out.println("魅力：　"+p3.miryoku);
+		System.out.println("　");		
+	}
+
+}
