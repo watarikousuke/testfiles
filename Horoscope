@@ -1,0 +1,80 @@
+/**
+ * 
+ */
+package testfile1;
+
+/**
+ * @author watar
+ *
+ */
+import java.util.Scanner;
+public class Horoscope {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+		System.out.println("＜星座チェッカー＞");
+		System.out.println("誕生日を入力してください");
+		System.out.println(" ");
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("生まれ月：");
+		int m =scanner.nextInt();
+		System.out.print("生まれ日：");
+		int d =scanner.nextInt();
+		System.out.println(" ");
+		if ( m == 3 && d >=21) {
+			System.out.println("あなたはおひつじ座です");
+		} else if ( m == 4 && d <=19) {
+			System.out.println("あなたはおひつじ座です");
+		} else if ( m == 4 && d >=20) {
+			System.out.println("あなたはおうし座です");
+		} else if ( m == 5 && d <=20) {
+			System.out.println("あなたはおうし座です");
+		} else if ( m == 5 && d >=21) {
+			System.out.println("あなたはふたご座です");
+		} else if ( m == 6 && d <=21) {
+			System.out.println("あなたはふたご座です");
+		} else if ( m == 6 && d >=22) {
+			System.out.println("あなたはかに座です");
+		} else if ( m == 7 && d <=22) {
+			System.out.println("あなたはかに座です");
+		} else if ( m == 7 && d >=23) {
+			System.out.println("あなたはしし座です");
+		} else if ( m == 8 && d <=22) {
+			System.out.println("あなたはしし座です");
+		} else if ( m == 8 && d >=23) {
+			System.out.println("あなたはおとめ座です");
+		} else if ( m == 9 && d <=22) {
+			System.out.println("あなたはおとめ座です");
+		} else if ( m == 9 && d >=23) {
+			System.out.println("あなたはてんびん座です");
+		} else if ( m == 10 && d <=23) {
+			System.out.println("あなたはてんびん座です");
+		} else if ( m == 10 && d >=24) {
+			System.out.println("あなたはさそり座です");
+		} else if ( m == 11 && d <=22) {
+			System.out.println("あなたはさそり座です");
+		} else if ( m == 11 && d >=23) {
+			System.out.println("あなたはいて座です");
+		} else if ( m == 12 && d <=21) {
+			System.out.println("あなたはいて座です");
+		} else if ( m == 12 && d >=22) {
+			System.out.println("あなたはやぎ座です");
+		} else if ( m == 1 && d <=19) {
+			System.out.println("あなたはやぎ座です");
+		} else if ( m == 1 && d >=20) {
+			System.out.println("あなたはみずがめ座です");
+		} else if ( m == 2 && d <=18) {
+			System.out.println("あなたはみずがめ座です");
+		} else if ( m == 2 && d >=19) {
+			System.out.println("あなたはうお座です");
+		} else if ( m == 3 && d <=20) {
+			System.out.println("あなたはうお座です");
+		} else {
+			System.out.println("誕生日を正しく入力してください");
+		}
+	}
+
+}
