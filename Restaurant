@@ -1,0 +1,69 @@
+/**
+ * 
+ */
+package testfile1;
+
+/**
+ * @author watar
+ *
+ */
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+public class Restaurant {
+	// 
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		//注文料金の合計金額の定義
+		int amount = 0;
+		//注文かごの定義
+		ArrayList<String> basket = new ArrayList<String>(); 
+		// 
+		System.out.println("＜定食屋メニュー（価格は全て税込み）＞");
+		String menus[] = {"生姜焼き定食","ハンバーグ定食","唐揚げ定食","オムライス","親子丼","カレーライス"};
+		int prices[] = {580, 680, 680, 580, 580, 480};
+		System.out.println(" ");
+		System.out.println("1." + menus[0] +"　"+ + prices[0] +"円");
+		System.out.println("2." + menus[1] +"　"+ + prices[1] +"円");
+		System.out.println("3." + menus[2] +"　"+ + prices[2] +"円");
+		System.out.println("4." + menus[3] +"　"+ + prices[3] +"円");
+		System.out.println("5." + menus[4] +"　"+ + prices[4] +"円");
+		System.out.println("6." + menus[5] +"　"+ + prices[5] +"円");
+		System.out.println(" ");
+		Scanner scanner = new Scanner(System.in);
+		int n = 1;
+		while ( n > 0 ) {
+			System.out.print("注文したいメニューの番号を入力してください。(1-6,0入力で終了)");
+			System.out.println(" ");
+			n = scanner.nextInt();
+			if ( n >=1 && n <= 6 ) {
+				System.out.println(menus[n-1] +"を注文します。"+prices[n-1] + "円です。");
+				System.out.println(" ");
+				amount = amount + prices[n-1];
+				basket.add(menus[n-1]);
+			} else if ( n==0 ) {
+				break;
+			} else {
+				System.out.println("正しい注文番号を入力してください。");
+				System.out.println(" ");
+			}
+		}
+		System.out.println(basket +"を注文します。");
+		System.out.println("合計金額は" + amount + "円です。");
+		System.out.println("よろしいですか？");
+		System.out.println(" ");
+		System.out.print("0.はい、1.いいえ：");
+		System.out.println(" ");
+		int order = scanner.nextInt();
+		if ( order ==0 ) {
+			System.out.println("注文が送信されました。");
+			System.out.println(amount +"円のお支払いをお願いします。");	
+		} else {
+			System.out.println("お手数ですが初めからやり直してください。");
+		}
+	}
+
+}
