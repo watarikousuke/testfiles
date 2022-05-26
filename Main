@@ -1,0 +1,80 @@
+/**
+ * 
+ */
+package restaurantorder;
+
+/**
+ * @author watar
+ *
+ */
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+public class Main {
+	// 
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		int amount = 0; //注文料金の合計金額の定義→別メソッド化
+		ArrayList<String> basket = new ArrayList<String>(); //注文かごの定義→別メソッドorクラス化 
+		boolean finalOrder =false; // 最終注文のフラグ→これどこに入れればいいんだろう
+		System.out.println("＜定食屋メニュー（価格は全て税込み）＞");
+		String menus[] = {"生姜焼き定食","ハンバーグ定食","唐揚げ定食","オムライス","親子丼","カレーライス"};
+		int prices[] = {580, 680, 680, 580, 580, 480};
+		System.out.println(" ");
+		System.out.println("1." + menus[0] +"　"+ + prices[0] +"円");
+		System.out.println("2." + menus[1] +"　"+ + prices[1] +"円");
+		System.out.println("3." + menus[2] +"　"+ + prices[2] +"円");
+		System.out.println("4." + menus[3] +"　"+ + prices[3] +"円");
+		System.out.println("5." + menus[4] +"　"+ + prices[4] +"円");
+		System.out.println("6." + menus[5] +"　"+ + prices[5] +"円");
+		System.out.println(" ");
+		order(finalOrder, menus, prices, amount, basket);
+		System.out.println(basket +"を注文します。");
+		int amountFinal = amount;
+		System.out.println("合計金額は" + amountFinal + "円です。");
+		System.out.println("よろしいですか？");
+		System.out.println(" ");
+		System.out.print("0.はい、1.いいえ：");
+		System.out.println(" ");
+		check(amountFinal);
+		finalOrder = true;
+	}
+	public static void order(boolean finalOrder, String menus[], int prices[], int amount, ArrayList<String> basket) {
+		Scanner scanner = new Scanner(System.in);
+		while ( finalOrder == false ) {
+			System.out.print("注文したいメニューの番号を入力してください。(1-6,0入力で終了)");
+			System.out.println(" ");
+			int n = scanner.nextInt();
+			if ( n >=1 && n <= 6 ) {
+				System.out.println(menus[n-1] +"を注文します。"+prices[n-1] + "円です。");
+				System.out.println(" ");
+				amount = amount + prices[n-1];
+				basket.add(menus[n-1]);
+			} else if ( n==0 ) {
+				int amountFianl = amount;
+				break;
+			} else {
+				System.out.println("正しい注文番号を入力してください。");
+				System.out.println(" ");
+			}
+		}
+	}
+	public static int amountFinal (int amount) {
+		return amount;
+	}
+	public static void check(int amountFinal) {
+		Scanner scanner = new Scanner(System.in);
+		int order = scanner.nextInt();
+		if ( order ==0 ) {
+			System.out.println("注文が送信されました。");
+			
+			System.out.println(amountFinal +"円のお支払いをお願いします。");
+		} else {
+			System.out.println("お手数ですが初めからやり直してください。");
+		}
+	}
+
+}
