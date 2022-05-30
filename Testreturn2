@@ -1,0 +1,60 @@
+/**
+ * 
+ */
+package testfile1;
+
+/**
+ * @author watar
+ *
+ */
+import java.util.Scanner;
+public class Testreturn2 {
+
+	/**リターン練習用クラス
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+		String menus[] = {"生姜焼き定食","ハンバーグ定食","唐揚げ定食","オムライス","親子丼","カレーライス"};
+		int prices[] = {580, 680, 680, 580, 580, 480};
+		System.out.println(" ");
+		System.out.println("1." + menus[0] +"　"+ + prices[0] +"円");
+		System.out.println("2." + menus[1] +"　"+ + prices[1] +"円");
+		System.out.println("3." + menus[2] +"　"+ + prices[2] +"円");
+		System.out.println("4." + menus[3] +"　"+ + prices[3] +"円");
+		System.out.println("5." + menus[4] +"　"+ + prices[4] +"円");
+		System.out.println("6." + menus[5] +"　"+ + prices[5] +"円");
+		System.out.println(" ");
+		int amount =add(0);
+		System.out.println(amount + "円です。お支払いをお願いします。");
+	}
+	public static int add(int a) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("注文したいメニューの番号を押してください(1-6)");
+		int n = scanner.nextInt();
+		switch (n) {
+		case 1:
+			a = 580;
+			break;
+		case 2:
+			a = 680;
+			break;
+		case 3:
+			a = 680;
+			break;
+		case 4:
+			a = 580;
+			break;
+		case 5:
+			a = 580;
+			break;
+		case 6:
+			a = 480;
+			break;
+		}
+		System.out.println(" ");
+		return +a;
+			
+	}
+
+}
