@@ -1,0 +1,26 @@
+/**
+ * 
+ */
+package testfile1;
+
+/**
+ * @author watar
+ *
+ */
+public class Testreturn {
+
+	/**リターン練習用クラス
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+		String menus[] = {"生姜焼き定食","ハンバーグ定食","唐揚げ定食","オムライス","親子丼","カレーライス"};
+		int prices[] = {580, 680, 680, 580, 580, 480};
+		int amount =add(prices[0],prices[1],prices[2]);//←これを入力するときどう処理するか
+		System.out.println(amount);
+	}
+	public static int add(int a, int b, int c) {//←これを入力するときどう処理するか
+		return a + b + c;//
+	}
+
+}
